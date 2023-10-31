@@ -12,7 +12,7 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
     entry,
     module: {
       // Любая обработка файлов выходящих за js
-      rules: buildLoaders()
+      rules: buildLoaders(options)
     },
     output: {
       path: build,
