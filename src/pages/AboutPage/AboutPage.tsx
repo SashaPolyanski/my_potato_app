@@ -1,9 +1,5 @@
-const AboutPage = () => {
-  return (
-    <div>
-      About Page
-    </div>
-  );
-};
+import {About} from "views/About";
+
+const AboutPage = () => <About/>
 
 export default AboutPage;

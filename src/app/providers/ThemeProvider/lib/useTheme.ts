@@ -1,5 +1,5 @@
 import {useCallback, useContext} from "react";
-import {LOCAL_STORAGE_THEME_KEY, Theme, ThemeCtx} from "./ThemeContext";
+import {LOCAL_STORAGE_THEME_KEY, Theme, ThemeCtx} from "../lib/ThemeContext";
 
 type useThemeProps = {
   theme: Theme
