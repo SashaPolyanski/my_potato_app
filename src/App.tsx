@@ -1,11 +1,21 @@
 import './index.scss'
-import s from './Main.module.scss'
+import {Link, Route, Routes} from 'react-router-dom'
+import {MainAsync} from "./pages/MainPage/Main.async";
+import {AboutAsync} from "./pages/AboutPage/About.async";
+import {Suspense} from "react";
 
 export const App = () => {
   return (
     <div className='app'>
-      test react app
-      <button className={s.btn}>asdasd</button>
+      <Link to={'/'}>На главную</Link>
+      <Link to={'/about'}>О сайте</Link>
+      <Suspense fallback={<div>loading</div>}>
+        <Routes>
+          <Route path={'/'} element={<MainAsync/>}/>
+          <Route path={'/about'} element={<AboutAsync/>}/>
+        </Routes>
+      </Suspense>
+
     </div>
   );
 };
