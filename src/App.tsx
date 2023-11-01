@@ -4,12 +4,13 @@ import {MainAsync} from "./pages/MainPage/Main.async";
 import {AboutAsync} from "./pages/AboutPage/About.async";
 import {Suspense} from "react";
 import {useTheme} from "./theme/useTheme";
+import {classNames} from "./utils/classNames";
 
 
 export const App = () => {
   const {theme, switchTheme} = useTheme()
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames('app', {}, [theme])}>
       <button onClick={switchTheme}>Switch theme</button>
       <Link to={'/'}>На главную</Link>
       <Link to={'/about'}>О сайте</Link>
