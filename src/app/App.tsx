@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import {useTheme} from "app/providers/ThemeProvider";
 import {classNames} from "utils/classNames";
 import {AppRouter} from "app/providers/router";
-import {Navbar} from "widgets/Navbar";
+import {Navbar, Sidebar} from "widgets";
 
 
 export const App = () => {
@@ -11,9 +11,14 @@ export const App = () => {
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar/>
-      <Link to={'/'}>На главную</Link>
-      <Link to={'/about'}>О сайте</Link>
-      <AppRouter/>
+      <div className={'content-page'}>
+        <Sidebar/>
+        <div className={'page-container'}>
+          <Link to={'/'}>На главную</Link>
+          <Link to={'/about'}>О сайте</Link>
+          <AppRouter/>
+        </div>
+      </div>
     </div>
   );
 };
