@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpractice_webpack_etc=self.webpackChunkpractice_webpack_etc||[]).push([[112],{112:(c,e,t)=>{t.r(e),t.d(e,{default:()=>i});var n=t(527),r=function(){return(0,n.jsx)("div",{children:"HOME"},void 0)};const i=function(){return(0,n.jsx)(r,{},void 0)}}}]);
