@@ -1,4 +1,4 @@
-import {LoginButton} from "./LoginButton";
-import {RegistrationButton} from "./RegistrationButton";
+import { LoginButton } from './LoginButton'
+import { RegistrationButton } from './RegistrationButton'
 
-export {LoginButton, RegistrationButton}
+export { LoginButton, RegistrationButton }

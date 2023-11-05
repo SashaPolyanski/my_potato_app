@@ -1,4 +1,4 @@
-import {Navbar} from "widgets/Navbar";
-import {Sidebar} from "widgets/Sidebar";
+import { Navbar } from 'widgets/Navbar'
+import { Sidebar } from 'widgets/Sidebar'
 
-export {Navbar, Sidebar}
+export { Navbar, Sidebar }
