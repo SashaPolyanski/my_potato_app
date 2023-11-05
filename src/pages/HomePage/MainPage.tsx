@@ -1,5 +1,5 @@
-import {Home} from "views/Home";
+import { Home } from 'views/Home'
 
 const MainPage = () => <Home/>
 
-export default MainPage;
+export default MainPage

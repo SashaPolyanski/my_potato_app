@@ -1,11 +1,10 @@
-import {useTranslation} from "react-i18next";
+import { useTranslation } from 'react-i18next'
 
 export const About = () => {
-  const {t} = useTranslation('about')
+  const { t } = useTranslation('about')
   return (
     <div>
       {t('aboutTest')}
     </div>
-  );
-};
-
+  )
+}

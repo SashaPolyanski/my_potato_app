@@ -1,13 +1,11 @@
-import {FC} from 'react'
+import { type FC } from 'react'
 import LanguageIcon from 'assets/language.svg'
-import {useTranslation} from "react-i18next";
+import { useTranslation } from 'react-i18next'
 import cls from './LanguageSwitcher.module.scss'
-import {classNames} from "utils/classNames";
+import { classNames } from 'utils/classNames'
 
-type LanguageSwitcherProps = {}
-
-export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({}) => {
-  const {i18n} = useTranslation()
+export const LanguageSwitcher: FC = () => {
+  const { i18n } = useTranslation()
   const changeLanguageHandler = () => {
     i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
   }
@@ -15,5 +13,5 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({}) => {
     <button onClick={changeLanguageHandler} className={classNames(cls.languageSwitcher, {}, [])}>
       <LanguageIcon/>
     </button>
-  );
-};
+  )
+}

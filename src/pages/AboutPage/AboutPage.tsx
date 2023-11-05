@@ -1,5 +1,5 @@
-import {About} from "views/About";
+import { About } from 'views/About'
 
 const AboutPage = () => <About/>
 
-export default AboutPage;
+export default AboutPage

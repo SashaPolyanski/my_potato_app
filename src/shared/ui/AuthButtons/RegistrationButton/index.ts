@@ -1,3 +1,3 @@
-import {RegistrationButton} from "./RegistrationButton";
+import { RegistrationButton } from './RegistrationButton'
 
-export {RegistrationButton}
+export { RegistrationButton }
