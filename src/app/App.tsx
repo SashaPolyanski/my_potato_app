@@ -5,9 +5,10 @@ import { classNames } from 'utils/classNames'
 import { AppRouter } from 'app/providers/router'
 import { Navbar, Sidebar } from 'widgets'
 import { useTranslation } from 'react-i18next'
-import { LanguageSwitcher } from 'shared/ui'
+import { LanguageSwitcher } from 'shared/components'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { useEffect } from 'react'
+import { Simulate } from 'react-dom/test-utils'
 
 export const App = () => {
   const { theme } = useTheme()
@@ -23,6 +24,11 @@ export const App = () => {
       navigate('/')
     }
   }, [location])
+  useEffect(() => {
+    if (Math.random() > 0.5) {
+      throw new Error()
+    }
+  })
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar/>

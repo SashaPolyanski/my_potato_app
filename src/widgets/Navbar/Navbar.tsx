@@ -1,8 +1,8 @@
 import s from './Navbar.module.scss'
 import { classNames } from 'utils/classNames'
 import { type FC } from 'react'
-import { LoginButton, RegistrationButton } from 'shared/ui/AuthButtons'
-import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
+import { ThemeSwitcher } from 'shared/components/ThemeSwitcher'
+import { LoginButton, RegistrationButton } from 'shared/components'
 
 interface NavbarProps {
   className?: string
