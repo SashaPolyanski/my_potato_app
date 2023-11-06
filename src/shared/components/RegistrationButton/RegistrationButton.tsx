@@ -1,4 +1,4 @@
-import cls from './LoginButton.module.scss'
+import cls from './RegistrationButton.module.scss'
 import { type FC } from 'react'
 import { classNames } from 'utils/classNames'
 
@@ -11,14 +11,14 @@ interface LoginButtonType {
   theme?: LoginButtonTheme
   className?: string
 }
-export const LoginButton: FC<LoginButtonType> = ({
-  theme = LoginButtonTheme.SECONDARY,
+
+export const RegistrationButton: FC<LoginButtonType> = ({
+  theme,
   className
 }) => {
-  console.log(cls[theme])
   return (
-    <button className={classNames(cls.loginButton, {}, [className, cls[theme]])}>
-      Login
+    <button className={classNames(cls.RegistrButton, {}, [className, cls[theme]])}>
+      Signup
     </button>
   )
 }

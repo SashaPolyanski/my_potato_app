@@ -6,14 +6,17 @@ import { ThemeProvider } from 'app/providers/ThemeProvider'
 import 'shared/config/i18n/i18n'
 import { Suspense } from 'react'
 import { PageLoader } from 'widgets'
+import { ErrorBoundary } from 'app/providers/ErrorBoundary'
 
 render(
   <BrowserRouter>
-    <ThemeProvider>
-      <Suspense fallback={<PageLoader/>}>
-        <App/>
-      </Suspense>
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <Suspense fallback={<PageLoader/>}>
+          <App/>
+        </Suspense>
+      </ThemeProvider>
+    </ErrorBoundary>
   </BrowserRouter>,
   document.getElementById('root')
 )
