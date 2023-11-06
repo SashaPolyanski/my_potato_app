@@ -5,11 +5,12 @@ import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'app/providers/ThemeProvider'
 import 'shared/config/i18n/i18n'
 import { Suspense } from 'react'
+import { PageLoader } from 'widgets'
 
 render(
   <BrowserRouter>
     <ThemeProvider>
-      <Suspense fallback={<div>...load</div>}>
+      <Suspense fallback={<PageLoader/>}>
         <App/>
       </Suspense>
     </ThemeProvider>
