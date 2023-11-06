@@ -1,16 +1,28 @@
 import './styles/index.scss'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useTheme } from 'app/providers/ThemeProvider'
 import { classNames } from 'utils/classNames'
 import { AppRouter } from 'app/providers/router'
 import { Navbar, Sidebar } from 'widgets'
 import { useTranslation } from 'react-i18next'
 import { LanguageSwitcher } from 'shared/ui'
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+import { useEffect } from 'react'
 
 export const App = () => {
   const { theme } = useTheme()
   const { t } = useTranslation()
+  const navigate = useNavigate()
+  const location = useLocation()
 
+  useEffect(() => {
+    const currentPath = location.pathname
+    const validPaths = Object.values(RoutePath)
+
+    if (!validPaths.includes(currentPath)) {
+      navigate('/')
+    }
+  }, [location])
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar/>
