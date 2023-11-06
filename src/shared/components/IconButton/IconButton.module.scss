@@ -1,4 +1,13 @@
 .iconBtn {
-  background: none;
-  border: none;
+  color: var(--primary-color);
+}
+
+.primary {
+  background: red;
+  border: 2px solid green;
+}
+
+.secondary {
+  background: blue;
+  border: 2px solid red;
 }
