@@ -17,8 +17,8 @@ jobs:
       - name: install modules
         run: npm install
       - name: build prod
-        run: npm build:prod
+        run: build:prod
       - name: lint
-        run: npm lint
+        run: lint
       - name: test
-        run: npm test
+        run: test
