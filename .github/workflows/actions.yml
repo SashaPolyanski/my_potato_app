@@ -15,10 +15,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
-        run: pnpm install
+        run: npm install
       - name: build prod
-        run: pnpm build:prod
+        run: npm build:prod
       - name: lint
-        run: pnpm lint
+        run: npm lint
       - name: test
-        run: pnpm test
+        run: npm test
