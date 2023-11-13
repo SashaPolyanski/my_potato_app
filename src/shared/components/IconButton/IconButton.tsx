@@ -1,16 +1,18 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import { classNames } from 'utils/classNames'
 import cls from './IconButton.module.scss'
 
-interface IconButtonProps {
-  text: string
+type IconButtonProps = {
+  icon?: ReactNode
+  onClick: () => void
+  className?: string
   variant?: 'secondary' | 'primary'
 }
 
-export const IconButton: FC<IconButtonProps> = ({ text, variant }) => {
+export const IconButton: FC<IconButtonProps> = ({ icon, className, ...rest }) => {
   return (
-    <button className={classNames(cls.iconBtn, { [cls[variant]]: true })}>
-      {text}
+    <button className={classNames(cls.iconBtn, {}, [className])} {...rest}>
+      {icon}
     </button>
   )
 }

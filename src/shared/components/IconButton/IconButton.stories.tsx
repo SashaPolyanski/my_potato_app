@@ -16,13 +16,11 @@ type Story = StoryObj<typeof IconButton>
 
 export const Primary: Story = {
   args: {
-    text: 'test story',
     variant: 'primary'
   }
 }
 export const Secondary: Story = {
   args: {
-    text: 'test story',
     variant: 'secondary'
   }
 }

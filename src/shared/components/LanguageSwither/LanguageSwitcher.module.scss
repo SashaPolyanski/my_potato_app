@@ -1,4 +1,9 @@
-.languageSwitcher {
-  background: none;
-  border: none;
+.languageSwitcherWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.languageText {
+  color: var(--inverted-primary-color);
+  text-transform: capitalize;
 }

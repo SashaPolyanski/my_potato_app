@@ -1,13 +1,24 @@
 .iconBtn {
-  color: var(--primary-color);
+  background: none;
+  width: 26px;
+  height: 26px;
+  border: none;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  justify-content: center;
+
+  path {
+    stroke: var(--inverted-primary-color);
+  }
+
 }
 
-.primary {
-  background: red;
-  border: 2px solid green;
+.iconBtn:hover {
+  cursor: pointer;
+  background-color: red;
+  border-radius: 50%;
+  transition: background-color 0.5s;
 }
 
-.secondary {
-  background: blue;
-  border: 2px solid red;
-}
+

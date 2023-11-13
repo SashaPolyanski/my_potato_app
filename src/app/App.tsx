@@ -1,11 +1,10 @@
 import './styles/index.scss'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useTheme } from 'app/providers/ThemeProvider'
 import { classNames } from 'utils/classNames'
 import { AppRouter } from 'app/providers/router'
 import { Navbar, Sidebar } from 'widgets'
 import { useTranslation } from 'react-i18next'
-import { IconButton, LanguageSwitcher } from 'shared/components'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { useEffect } from 'react'
 
@@ -35,10 +34,7 @@ export const App = () => {
         <Sidebar/>
         <div className={'page-container'}>
           <div>{t('test')}</div>
-          <LanguageSwitcher/>
-          <Link to={'/'}>На главную</Link>
-          <Link to={'/about'}>О сайте</Link>
-          <IconButton text={'test icon button'} variant={'secondary'}/>
+
           <AppRouter/>
         </div>
       </div>

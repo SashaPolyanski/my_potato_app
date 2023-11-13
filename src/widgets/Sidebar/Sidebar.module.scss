@@ -10,3 +10,20 @@
   width: var(--sidebar-width-collapsed);
   transition: 0.3s width;
 }
+
+.collapsedBtn {
+  transform: rotate(180deg);
+}
+
+.sidebarBtn {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  background: none;
+  border: none;
+}
+
+.sidebarItems {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,19 @@
+.link {
+  display: flex;
+  text-decoration: none;
+  margin-left: 30px;
+
+  path {
+    stroke: var(--inverted-primary-color);
+  }
+
+  color: var(--inverted-primary-color);
+}
+
+.linkTitle {
+  margin-left: 10px;
+}
+
+.collapsed {
+  display: none;
+}
