@@ -1,6 +1,7 @@
 import cls from './LoginButton.module.scss'
-import { type FC } from 'react'
+import { type FC, useCallback, useState } from 'react'
 import { classNames } from 'utils/classNames'
+import { Modal } from 'shared/components'
 
 export enum LoginButtonTheme {
   PRIMARY = 'primary',
@@ -16,10 +17,16 @@ export const LoginButton: FC<LoginButtonType> = ({
   theme = LoginButtonTheme.SECONDARY,
   className
 }) => {
-  console.log(cls[theme])
+  const [open, setOpen] = useState(false)
+  const toggleOpenHandler = useCallback(() => {
+    setOpen((p) => !p)
+  }, [])
   return (
-    <button className={classNames(cls.loginButton, {}, [className, cls[theme]])}>
-      Login
-    </button>
+    <>
+      <button onClick={toggleOpenHandler} className={classNames(cls.loginButton, {}, [className, cls[theme]])}>
+        Login
+      </button>
+      <Modal open={open} onClose={toggleOpenHandler}>Login modal</Modal>
+    </>
   )
 }

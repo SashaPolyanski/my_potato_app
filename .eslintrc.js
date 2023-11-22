@@ -6,7 +6,8 @@ module.exports = {
   "extends": [
     "standard-with-typescript",
     "plugin:react/recommended",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:react-hooks/recommended"
   ],
   "overrides": [
     {
@@ -26,7 +27,8 @@ module.exports = {
     "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "react",
+    "react-hooks"
   ],
   "rules": {
     "@typescript-eslint/strict-boolean-expressions": "off",
@@ -35,7 +37,8 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/no-floating-promises": "off",
-    "@typescript-eslint/consistent-type-imports": "off"
-
+    "@typescript-eslint/consistent-type-imports": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error"
   }
 }

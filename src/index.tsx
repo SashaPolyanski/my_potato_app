@@ -7,6 +7,7 @@ import 'shared/config/i18n/i18n'
 import { Suspense } from 'react'
 import { PageLoader } from 'widgets'
 import { ErrorBoundary } from 'app/providers/ErrorBoundary'
+import 'app/styles/index.scss'
 
 render(
   <BrowserRouter>
