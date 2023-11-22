@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { useEffect, useState } from 'react'
 import { Modal } from 'shared/components'
+import { Counter } from 'entities/Counter/ui/Counter'
 
 export const App = () => {
   const { theme } = useTheme()
@@ -22,6 +23,7 @@ export const App = () => {
       navigate('/')
     }
   }, [location, navigate])
+
   // useEffect(() => {
   //   if (Math.random() > 0.5) {
   //     throw new Error()
@@ -30,10 +32,12 @@ export const App = () => {
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar/>
+      <Counter/>
       <div className={'content-page'}>
         <Sidebar/>
         <div className={'page-container'}>
           <div>{t('test')}</div>
+
           <button onClick={() => {
             setOpen(true)
           }}>open modal

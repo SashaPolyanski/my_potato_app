@@ -8,16 +8,19 @@ import { Suspense } from 'react'
 import { PageLoader } from 'widgets'
 import { ErrorBoundary } from 'app/providers/ErrorBoundary'
 import 'app/styles/index.scss'
+import { StoreProvider } from 'app/providers/StoreProvider'
 
 render(
   <BrowserRouter>
-    <ErrorBoundary>
-      <ThemeProvider>
-        <Suspense fallback={<PageLoader/>}>
-          <App/>
-        </Suspense>
-      </ThemeProvider>
-    </ErrorBoundary>
+    <StoreProvider>
+      <ErrorBoundary>
+        <ThemeProvider>
+          <Suspense fallback={<PageLoader/>}>
+            <App/>
+          </Suspense>
+        </ThemeProvider>
+      </ErrorBoundary>
+    </StoreProvider>
   </BrowserRouter>,
   document.getElementById('root')
 )
